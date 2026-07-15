@@ -11,7 +11,9 @@ const app = express();
 
 await connectCloudinary()
 
-app.use(cors())
+app.use(cors({
+    origin: "https://quick-ai-client-rysy.onrender.com",
+  credentials: true }))
 app.use(express.json())
 app.use(clerkMiddleware())
 
